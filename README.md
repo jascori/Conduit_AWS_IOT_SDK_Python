@@ -22,16 +22,19 @@ See http://multitech.net/mlinux/feeds/ for a list of available versions
 ```
 
 ## Install mLinux python-pip package
-`# opkg update
-# opkg install python-pip`
+```
+# opkg update
+# opkg install python-pip
+```
 
 
 ## Upgrade to newer pip version
 [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
 
-`# wget https://bootstrap.pypa.io/get-pip.py
+```
+# wget https://bootstrap.pypa.io/get-pip.py
 # python get-pip.py`
-
+```
 
 ### SSL Warning
 Successfully installed pip-9.0.1 setuptools-38.4.1 wheel-0.30.0
@@ -43,10 +46,11 @@ mLinux 4.x is needed for python with SSL
 ## Install AWS IoT SDK
 [AWS IoT Python SDK](https://github.com/aws/aws-iot-device-sdk-python)
 
-`# pip install AWSIoTPythonSDK
+```
+# pip install AWSIoTPythonSDK
 # sudo pip install awscli
-# pip install boto3`
-
+# pip install boto3
+```
 [Connect to your AWS back-end](https://us-west-2.console.aws.amazon.com/console/home)
 [Kenesis](https://us-west-2.console.aws.amazon.com/kinesis/home)
 [Kenesis Getting Started](https://aws.amazon.com/kinesis/getting-started/)
@@ -69,11 +73,15 @@ Stream name LoRaWAN will need to be defined for the producer application on Cond
 The provided application can be run on the Conduit. It subcribes via MQTT for LoRaWAN uplinks and forwards them to the LoRaWAN Kenisis stream.
 
 Install boto_producer.py by copying the file to the Conduit file system
-`scp boto_producer.py admin@192.168.2.1:`
+```
+scp boto_producer.py admin@192.168.2.1:
+```
 
 
 Run 
-`python boto_producer.py`
+```
+python boto_producer.py
+```
 
 
 ## Consumer Application
