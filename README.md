@@ -12,17 +12,12 @@ If an error occurs update the mlinux feeds urls to
 See http://multitech.net/mlinux/feeds/ for a list of available versions
 3.3.15 is currently the latest
 
->mlinux-feed.conf example
-
->———————————————————————————————————————
-
->src/gz mlinux-all http://multitech.net/mlinux/feeds/3.3.15/all
-
->src/gz mlinux-arm926ejste http://multitech.net/mlinux/feeds/3.3.15/arm926ejste
-
->src/gz mlinux-mtcdt http://multitech.net/mlinux/feeds/3.3.15/mtcdt
-
->———————————————————————————————————————
+   mlinux-feed.conf example
+   ———————————————————————————————————————
+   src/gz mlinux-all http://multitech.net/mlinux/feeds/3.3.15/all
+   src/gz mlinux-arm926ejste http://multitech.net/mlinux/feeds/3.3.15/arm926ejste
+   src/gz mlinux-mtcdt http://multitech.net/mlinux/feeds/3.3.15/mtcdt
+   ———————————————————————————————————————
 
 ## Install mLinux python-pip package
 `# opkg update
