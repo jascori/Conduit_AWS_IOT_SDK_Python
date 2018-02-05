@@ -3,6 +3,26 @@
 Using Kinesis stream API on Conduit can be used to create a scalable LoRaWAN sensor Application network.
 Kinesis streams can be scaled up for any number of producers and consumers.
 
+## Overview
+
+1. Install application dependancies on Conduit
+	1. Update mLinux packages
+	2. Install pip v1.3.1 and dependencies from mLinux packages
+	3. Upgrade to pip v9.0.1
+	4. Install AWS SDK
+	5. Install boto3 library for python
+	6. Copy AWS IAM Credentials
+	7. Copy MQTT to AWS Kinesis producer application
+2. Install application dependencies on Server
+	1. Install to pip v9.0.1
+	2. Install AWS SDK
+	3. Install boto3 library for python
+	4. Copy AWS IAM Credentials
+	5. Copy MQTT to AWS Kinesis consumer application
+3. Start consumer and producer applications
+4. Connect LoRaWAN sensor and send packets to Conduit
+
+
 ## Update the package list to install pip and dependencies
 `# opkg update`
 
