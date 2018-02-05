@@ -87,7 +87,7 @@ admin@mtcdt# opkg install python-pip
 
 ```
 admin@mtcdt# wget https://bootstrap.pypa.io/get-pip.py
-admin@mtcdt# python get-pip.py`
+admin@mtcdt# python get-pip.py
 ```
 
 #### SSL Warning
@@ -112,7 +112,7 @@ The provided application can be run on the Conduit. It subcribes via MQTT for Lo
 
 Install boto_producer.py by copying the file to the Conduit file system
 ```
-linux$ scp boto_producer.py admin@192.168.2.1:
+user@localhost$ scp boto_producer.py admin@192.168.2.1:
 ```
 
 
@@ -131,8 +131,8 @@ The AWS IoT SDK will be needed on the Server for the consumer application to pol
 [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
 
 ```
-linux$ wget https://bootstrap.pypa.io/get-pip.py
-linux$ python get-pip.py
+user@localhost$ wget https://bootstrap.pypa.io/get-pip.py
+user@localhost$ python get-pip.py
 ```
 
 
@@ -142,9 +142,9 @@ linux$ python get-pip.py
 
 
 ```
-linux$ pip install AWSIoTPythonSDK
-linux$ sudo pip install awscli
-linux$ pip install boto3
+user@localhost$ pip install AWSIoTPythonSDK
+user@localhost$ sudo pip install awscli
+user@localhost$ pip install boto3
 ```
 
 ### iii. Copy Consumer Application to Server
@@ -153,7 +153,7 @@ The provided consumer application will poll the kenisis stream for packets forwa
 
 Run with
 ```
-linux$ python boto_consumer.py
+user@localhost$ python boto_consumer.py
 ```
 
 
@@ -179,7 +179,7 @@ mLinux 4.x has support for SSL in python, it should be available in early 2018
 
 ### i. Run consumer 
 ```
-linux$ python boto_consumer.py
+user@localhost$ python boto_consumer.py
 ```
 
 ### ii. Run producer 
