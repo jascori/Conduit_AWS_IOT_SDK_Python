@@ -7,6 +7,13 @@ Kinesis streams can be scaled up for any number of producers and consumers.
 
 ![Architecture Image](https://github.com/jascori/Conduit_AWS_IOT_SDK_Python/raw/master/AWS-Kinesis-Conduit.png)
 
+## Hardware and Software
+
+1. [Multitech mDot LoRaWAN Module](https://www.multitech.com/brands/multiconnect-mdot)
+2. [Multitech Conduit LoRaWAN Gateway](https://www.multitech.com/brands/multiconnect-conduit)
+3. AWS Kinesis Stream
+4. Linux Server for Consumer Application
+
 ## Overview
 
 1. Install application dependencies on Conduit
@@ -169,7 +176,7 @@ mLinux 4.x has support for SSL in python, it should be available in early 2018
 linux$ python boto_consumer.py
 ```
 
-### Run producer 
+### ii. Run producer 
 ```
 admin@mtcdt# python boto_producer.py
 ```
@@ -177,5 +184,10 @@ admin@mtcdt# python boto_producer.py
 
 ## 5. Connect LoRaWAN sensor and send packets to Conduit
 
+### i. Configure Network Server on Conduit
 
-Provided by [Jascori Consulting](https://www.jascori.com)
+### ii. Configure mDot
+
+
+
+Tutorial provided by [Jascori Consulting](https://www.jascori.com)
