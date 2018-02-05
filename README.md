@@ -42,6 +42,8 @@ Kinesis streams can be scaled up for any number of producers and consumers.
 
 ## 1. Install application dependencies on Conduit
 
+Install script provided see *install-aws-sdk-python.sh* for steps i - iv
+
 ### i. Update mLinux packages
 
 #### Update the package list to install pip and dependencies
@@ -111,6 +113,8 @@ admin@mtcdt# python boto_producer.py
 
 ## 2. Install application dependencies on Server
 
+The AWS IoT SDK will be needed on the Server for the consumer application to poll for packets produced by the Conduit.
+
 
 ### i. Install pip v9.0.1
 [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
@@ -156,7 +160,7 @@ mLinux 4.x has support for SSL in python, it should be available in early 2018
 
 ### iii. Copy Stream IAM Credentials to the Conduit and Server
 
-/home/root/.aws/credentials file can be created to authenticate the Conduit sensor posts
+~/.aws/credentials file will be used to authenticate the producer and consumer applications
 
 ## 4. Start consumer and producer applications
 
