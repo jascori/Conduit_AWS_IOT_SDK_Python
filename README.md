@@ -5,7 +5,7 @@ Kinesis streams can be scaled up for any number of producers and consumers.
 
 ## Architecture
 
-![Architecture Image](https://github.com/jascori/Conduit_AWS_IOT_SDK_Python/AWS-Kinesis-Conduit.png)
+![Architecture Image](https://github.com/jascori/Conduit_AWS_IOT_SDK_Python/raw/master/AWS-Kinesis-Conduit.png)
 
 ## Overview
 
