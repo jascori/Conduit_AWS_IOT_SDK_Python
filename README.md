@@ -45,10 +45,10 @@ Kinesis streams can be scaled up for any number of producers and consumers.
 ### i. Update mLinux packages
 
 #### Update the package list to install pip and dependencies
-`# opkg update`
+`admin@mtcdt# opkg update`
 
 If an error occurs update the mlinux feeds urls to 
-`# vi /etc/opkg/mlinux-feed.conf`
+`admin@mtcdt# vi /etc/opkg/mlinux-feed.conf`
 
 See http://multitech.net/mlinux/feeds/ for a list of available versions
 3.3.15 is currently the latest
@@ -64,8 +64,8 @@ See http://multitech.net/mlinux/feeds/ for a list of available versions
 
 ### ii. Install mLinux python-pip package
 ```
-# opkg update
-# opkg install python-pip
+admin@mtcdt# opkg update
+admin@mtcdt# opkg install python-pip
 ```
 
 
@@ -73,8 +73,8 @@ See http://multitech.net/mlinux/feeds/ for a list of available versions
 [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
 
 ```
-# wget https://bootstrap.pypa.io/get-pip.py
-# python get-pip.py`
+admin@mtcdt# wget https://bootstrap.pypa.io/get-pip.py
+admin@mtcdt# python get-pip.py`
 ```
 
 #### SSL Warning
@@ -88,8 +88,8 @@ mLinux 4.x is needed for python with SSL
 [AWS IoT Python SDK](https://github.com/aws/aws-iot-device-sdk-python)
 
 ```
-# pip install AWSIoTPythonSDK
-# pip install boto3
+admin@mtcdt# pip install AWSIoTPythonSDK
+admin@mtcdt# pip install boto3
 ```
 
 
@@ -99,13 +99,13 @@ The provided application can be run on the Conduit. It subcribes via MQTT for Lo
 
 Install boto_producer.py by copying the file to the Conduit file system
 ```
-scp boto_producer.py admin@192.168.2.1:
+linux$ scp boto_producer.py admin@192.168.2.1:
 ```
 
 
-Run 
+Run with
 ```
-python boto_producer.py
+admin@mtcdt# python boto_producer.py
 ```
 
 
@@ -116,8 +116,8 @@ python boto_producer.py
 [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
 
 ```
-# wget https://bootstrap.pypa.io/get-pip.py
-# python get-pip.py`
+linux$ wget https://bootstrap.pypa.io/get-pip.py
+linux$ python get-pip.py`
 ```
 
 
@@ -127,24 +127,25 @@ python boto_producer.py
 
 
 ```
-# pip install AWSIoTPythonSDK
-# sudo pip install awscli
-# pip install boto3
+linux$ pip install AWSIoTPythonSDK
+linux$ sudo pip install awscli
+linux$ pip install boto3
 ```
 
 ### iii. Copy Consumer Application to Server
 
 The provided consumer application will poll the kenisis stream for packets forwarded from the Conduit gateways.
 
-Run 
-`python boto_consumer.py`
+Run with
+`linux$ python boto_consumer.py`
 
 
 ## 3. Create Kinesis Stream and IAM Credentials on AWS
 
 ### i. Create Kinesis Stream
 [Stream Setup](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)
-A Kinesis stream named "LoRaWAN" will need to be defined for the producer application on Conduit to forward received packets
+
+Create a Kinesis stream named "LoRaWAN" for the producer application on Conduit to forward received packets and the consumer application to poll for packets.
 
 ### ii. Create IAM credentials 
 [Setup IAM role for Conduit access to kinesis stream](https://console.aws.amazon.com/iam/)
@@ -159,4 +160,18 @@ mLinux 4.x has support for SSL in python, it should be available in early 2018
 
 ## 4. Start consumer and producer applications
 
+### i. Run consumer 
+```
+linux$ python boto_consumer.py
+```
+
+### Run producer 
+```
+admin@mtcdt# python boto_producer.py
+```
+
+
 ## 5. Connect LoRaWAN sensor and send packets to Conduit
+
+
+Provided by [Jascori Consulting](https://www.jascori.com)
