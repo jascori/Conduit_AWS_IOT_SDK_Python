@@ -28,16 +28,16 @@ Kinesis streams can be scaled up for any number of producers and consumers.
 
 ## References
 
-[Connect to your AWS back-end](https://us-west-2.console.aws.amazon.com/console/home)
-[Kenesis](https://us-west-2.console.aws.amazon.com/kinesis/home)
-[Kenesis Getting Started](https://aws.amazon.com/kinesis/getting-started/)
-[Stream Setup](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)
-[Setup IAM role for Conduit access to kinesis stream](https://console.aws.amazon.com/iam/)
-[Boto library](https://github.com/boto/boto)
-[Boto Reference](http://boto3.readthedocs.io/en/latest/reference/services/iot.html)
-[Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
-[AWS IoT Python SDK](https://github.com/aws/aws-iot-device-sdk-python)
-[AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html)
+* [Connect to your AWS back-end](https://us-west-2.console.aws.amazon.com/console/home)
+* [Kenesis](https://us-west-2.console.aws.amazon.com/kinesis/home)
+* [Kenesis Getting Started](https://aws.amazon.com/kinesis/getting-started/)
+* [Stream Setup](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)
+* [Setup IAM role for Conduit access to kinesis stream](https://console.aws.amazon.com/iam/)
+* [Boto library](https://github.com/boto/boto)
+* [Boto Reference](http://boto3.readthedocs.io/en/latest/reference/services/iot.html)
+* [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/)
+* [AWS IoT Python SDK](https://github.com/aws/aws-iot-device-sdk-python)
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html)
 
 
 ## 1. Install application dependencies on Conduit
