@@ -54,10 +54,14 @@ Install script provided see *install-aws-sdk-python.sh* for steps i - iv
 ### i. Update mLinux packages
 
 #### Update the package list to install pip and dependencies
-`admin@mtcdt# opkg update`
+```
+admin@mtcdt# opkg update
+```
 
 If an error occurs update the mlinux feeds urls to 
-`admin@mtcdt# vi /etc/opkg/mlinux-feed.conf`
+```
+admin@mtcdt# vi /etc/opkg/mlinux-feed.conf
+```
 
 See http://multitech.net/mlinux/feeds/ for a list of available versions
 3.3.15 is currently the latest
@@ -128,7 +132,7 @@ The AWS IoT SDK will be needed on the Server for the consumer application to pol
 
 ```
 linux$ wget https://bootstrap.pypa.io/get-pip.py
-linux$ python get-pip.py`
+linux$ python get-pip.py
 ```
 
 
@@ -148,7 +152,9 @@ linux$ pip install boto3
 The provided consumer application will poll the kenisis stream for packets forwarded from the Conduit gateways.
 
 Run with
-`linux$ python boto_consumer.py`
+```
+linux$ python boto_consumer.py
+```
 
 
 ## 3. Create Kinesis Stream and IAM Credentials on AWS
